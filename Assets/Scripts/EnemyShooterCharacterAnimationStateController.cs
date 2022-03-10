@@ -10,7 +10,8 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         Idle,
         Walk,
         Run,
-        Crouch
+        Crouch,
+        Shoot
     }
 
     Animator animator;
@@ -28,21 +29,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         {
             action = value;
             //animator.SetInteger("Action", (int)action);
-        }
-    }
-
-    bool isAiming;
-    bool IsAiming
-    {
-        get { return isAiming; }
-
-        set
-        {
-            isAiming = value;
 
             if (isAiming)
             {
-                switch (Action)
+                switch (action)
                 {
                     case ActionList.Idle:
                         animator.SetTrigger("IdleAiming");
@@ -53,13 +43,16 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                     case ActionList.Run:
                         animator.SetTrigger("RunAiming");
                         break;
+                    case ActionList.Shoot:
+                        animator.SetTrigger("Shoot");
+                        break;
                     default:
                         break;
                 }
             }
             else
             {
-                switch (Action)
+                switch (action)
                 {
                     case ActionList.Idle:
                         animator.SetTrigger("Idle");
@@ -74,6 +67,52 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                         break;
                 }
             }
+        }
+    }
+
+    bool isAiming;
+    bool IsAiming
+    {
+        get { return isAiming; }
+
+        set
+        {
+            isAiming = value;
+
+            //if (isAiming)
+            //{
+            //    switch (Action)
+            //    {
+            //        case ActionList.Idle:
+            //            animator.SetTrigger("IdleAiming");
+            //            break;
+            //        case ActionList.Walk:
+            //            animator.SetTrigger("WalkAiming");
+            //            break;
+            //        case ActionList.Run:
+            //            animator.SetTrigger("RunAiming");
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    switch (Action)
+            //    {
+            //        case ActionList.Idle:
+            //            animator.SetTrigger("Idle");
+            //            break;
+            //        case ActionList.Walk:
+            //            animator.SetTrigger("Walk");
+            //            break;
+            //        case ActionList.Run:
+            //            animator.SetTrigger("Run");
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //}
 
             //animator.SetBool("Aiming", isAiming);
         }
@@ -96,10 +135,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (Action != ActionList.Walk)
             {
-                if (IsAiming)
-                    animator.SetTrigger("WalkAiming");
-                else
-                    animator.SetTrigger("Walk");
+                //if (IsAiming)
+                //    animator.SetTrigger("WalkAiming");
+                //else
+                //    animator.SetTrigger("Walk");
 
                 Action = ActionList.Walk;
             }
@@ -111,10 +150,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (transform.position == markedPosition)
             {
-                if (IsAiming)
-                    animator.SetTrigger("IdleAiming");
-                else
-                    animator.SetTrigger("Idle");
+                //if (IsAiming)
+                //    animator.SetTrigger("IdleAiming");
+                //else
+                //    animator.SetTrigger("Idle");
 
                 Action = ActionList.Idle;
             }
@@ -129,10 +168,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (Action != ActionList.Run)
             {
-                if (IsAiming)
-                    animator.SetTrigger("RunAiming");
-                else
-                    animator.SetTrigger("Run");
+                //if (IsAiming)
+                //    animator.SetTrigger("RunAiming");
+                //else
+                //    animator.SetTrigger("Run");
 
                 Action = ActionList.Run;
             }
@@ -144,10 +183,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (transform.position == markedPosition)
             {
-                if (IsAiming)
-                    animator.SetTrigger("IdleAiming");
-                else
-                    animator.SetTrigger("Idle");
+                //if (IsAiming)
+                //    animator.SetTrigger("IdleAiming");
+                //else
+                //    animator.SetTrigger("Idle");
 
                 Action = ActionList.Idle;
             }
@@ -155,9 +194,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
 
         //Aiming
-        if (Input.GetKeyDown(KeyCode.A) && Action != ActionList.Crouch)
+        if (Input.GetKeyDown(KeyCode.A) && Action != ActionList.Crouch && Action != ActionList.Shoot)
         {
             IsAiming = !IsAiming;
+            Action = Action;
         }
 
         //Crouch
@@ -165,7 +205,7 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         {
             if (Action == ActionList.Crouch)
             {
-                animator.SetTrigger("Idle");
+                //animator.SetTrigger("Idle");
                 Action = ActionList.Idle;
             }
             else
@@ -173,10 +213,25 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                 animator.SetTrigger("Crouch");
                 Action = ActionList.Crouch;
 
-                isAiming = false;
+                IsAiming = false;
             }
         }
 
+
+        //Shoot
+        if (Input.GetKeyDown(KeyCode.S) && IsAiming)
+        {
+            if (Action == ActionList.Shoot)
+            {
+                Action = ActionList.Idle;
+                //animator.SetTrigger("IdleAiming");
+            }
+            else
+            {
+                Action = ActionList.Shoot;
+                //animator.SetTrigger("Shoot");
+            }
+        }
     }
 
     private void MoveToMarkedPosition(float _speed)
