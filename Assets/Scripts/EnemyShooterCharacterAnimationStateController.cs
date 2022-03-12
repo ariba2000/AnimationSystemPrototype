@@ -28,23 +28,22 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         set
         {
             action = value;
-            //animator.SetInteger("Action", (int)action);
 
             if (isAiming)
             {
                 switch (action)
                 {
                     case ActionList.Idle:
-                        animator.SetTrigger("IdleAiming");
+                        animator.CrossFadeInFixedTime("Base Layer.Aiming", 0.25f);
                         break;
                     case ActionList.Walk:
-                        animator.SetTrigger("WalkAiming");
+                        animator.CrossFadeInFixedTime("Base Layer.WalkAiming", 0.25f);
                         break;
                     case ActionList.Run:
-                        animator.SetTrigger("RunAiming");
+                        animator.CrossFadeInFixedTime("Base Layer.RunAiming", 0.25f);
                         break;
                     case ActionList.Shoot:
-                        animator.SetTrigger("Shoot");
+                        animator.CrossFadeInFixedTime("Base Layer.Shoot", 0.25f);
                         break;
                     default:
                         break;
@@ -55,13 +54,16 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                 switch (action)
                 {
                     case ActionList.Idle:
-                        animator.SetTrigger("Idle");
+                        animator.CrossFadeInFixedTime("Base Layer.Idle", 0.25f);
                         break;
                     case ActionList.Walk:
-                        animator.SetTrigger("Walk");
+                        animator.CrossFadeInFixedTime("Base Layer.Walk", 0.25f);
                         break;
                     case ActionList.Run:
-                        animator.SetTrigger("Run");
+                        animator.CrossFadeInFixedTime("Base Layer.Run", 0.25f);
+                        break;
+                    case ActionList.Crouch:
+                        animator.CrossFadeInFixedTime("Base Layer.Crouch", 0.25f);
                         break;
                     default:
                         break;
@@ -78,43 +80,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         set
         {
             isAiming = value;
-
-            //if (isAiming)
-            //{
-            //    switch (Action)
-            //    {
-            //        case ActionList.Idle:
-            //            animator.SetTrigger("IdleAiming");
-            //            break;
-            //        case ActionList.Walk:
-            //            animator.SetTrigger("WalkAiming");
-            //            break;
-            //        case ActionList.Run:
-            //            animator.SetTrigger("RunAiming");
-            //            break;
-            //        default:
-            //            break;
-            //    }
-            //}
-            //else
-            //{
-            //    switch (Action)
-            //    {
-            //        case ActionList.Idle:
-            //            animator.SetTrigger("Idle");
-            //            break;
-            //        case ActionList.Walk:
-            //            animator.SetTrigger("Walk");
-            //            break;
-            //        case ActionList.Run:
-            //            animator.SetTrigger("Run");
-            //            break;
-            //        default:
-            //            break;
-            //    }
-            //}
-
-            //animator.SetBool("Aiming", isAiming);
         }
     }
 
@@ -135,10 +100,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (Action != ActionList.Walk)
             {
-                //if (IsAiming)
-                //    animator.SetTrigger("WalkAiming");
-                //else
-                //    animator.SetTrigger("Walk");
 
                 Action = ActionList.Walk;
             }
@@ -150,11 +111,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (transform.position == markedPosition)
             {
-                //if (IsAiming)
-                //    animator.SetTrigger("IdleAiming");
-                //else
-                //    animator.SetTrigger("Idle");
-
                 Action = ActionList.Idle;
             }
         }
@@ -168,11 +124,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (Action != ActionList.Run)
             {
-                //if (IsAiming)
-                //    animator.SetTrigger("RunAiming");
-                //else
-                //    animator.SetTrigger("Run");
-
                 Action = ActionList.Run;
             }
         }
@@ -183,10 +134,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (transform.position == markedPosition)
             {
-                //if (IsAiming)
-                //    animator.SetTrigger("IdleAiming");
-                //else
-                //    animator.SetTrigger("Idle");
 
                 Action = ActionList.Idle;
             }
@@ -205,15 +152,12 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         {
             if (Action == ActionList.Crouch)
             {
-                //animator.SetTrigger("Idle");
                 Action = ActionList.Idle;
             }
             else
             {
-                animator.SetTrigger("Crouch");
-                Action = ActionList.Crouch;
-
                 IsAiming = false;
+                Action = ActionList.Crouch;
             }
         }
 
@@ -224,12 +168,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
             if (Action == ActionList.Shoot)
             {
                 Action = ActionList.Idle;
-                //animator.SetTrigger("IdleAiming");
             }
             else
             {
                 Action = ActionList.Shoot;
-                //animator.SetTrigger("Shoot");
             }
         }
     }
