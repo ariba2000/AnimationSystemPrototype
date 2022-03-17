@@ -11,7 +11,9 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         Walk,
         Run,
         Crouch,
-        Shoot
+        Shoot,
+        Jump,
+        Death
     }
 
     Animator animator;
@@ -45,6 +47,9 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                     case ActionList.Shoot:
                         animator.CrossFadeInFixedTime("Base Layer.Shoot", 0.25f);
                         break;
+                    case ActionList.Death:
+                        animator.CrossFadeInFixedTime("Base Layer.Death", 0.25f);
+                        break;
                     default:
                         break;
                 }
@@ -65,6 +70,12 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                     case ActionList.Crouch:
                         animator.CrossFadeInFixedTime("Base Layer.Crouch", 0.25f);
                         break;
+                    case ActionList.Jump:
+                        animator.CrossFadeInFixedTime("Base Layer.Jump", 0.25f);
+                        break;
+                    case ActionList.Death:
+                        animator.CrossFadeInFixedTime("Base Layer.Death", 0.25f);
+                        break;
                     default:
                         break;
                 }
@@ -73,16 +84,7 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
     }
 
     bool isAiming;
-    bool IsAiming
-    {
-        get { return isAiming; }
-
-        set
-        {
-            isAiming = value;
-        }
-    }
-
+    bool gettingHit;
 
     void Start()
     {
@@ -134,7 +136,6 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
 
             if (transform.position == markedPosition)
             {
-
                 Action = ActionList.Idle;
             }
         }
@@ -143,7 +144,7 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         //Aiming
         if (Input.GetKeyDown(KeyCode.A) && Action != ActionList.Crouch && Action != ActionList.Shoot)
         {
-            IsAiming = !IsAiming;
+            isAiming = !isAiming;
             Action = Action;
         }
 
@@ -156,14 +157,14 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
             }
             else
             {
-                IsAiming = false;
+                isAiming = false;
                 Action = ActionList.Crouch;
             }
         }
 
 
         //Shoot
-        if (Input.GetKeyDown(KeyCode.S) && IsAiming)
+        if (Input.GetKeyDown(KeyCode.S) && isAiming)
         {
             if (Action == ActionList.Shoot)
             {
@@ -172,6 +173,53 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
             else
             {
                 Action = ActionList.Shoot;
+            }
+        }
+
+
+        //Jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Action == ActionList.Jump)
+            {
+                animator.CrossFadeInFixedTime("Landing", 0.1f);
+            }
+            else
+            {
+                Action = ActionList.Jump;
+            }
+        }
+
+        if (Action == ActionList.Jump)
+        {
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.IsName("Landing") && stateInfo.normalizedTime > 1)
+            {
+                Action = ActionList.Idle;
+            }
+        }
+
+
+        //Death
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Action = ActionList.Death;
+        }
+
+        //Get Hit
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            animator.CrossFadeInFixedTime("GetHit", 0.25f);
+            gettingHit = true;
+        }
+
+        if (gettingHit)
+        {
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            if (stateInfo.IsName("GetHit") && stateInfo.normalizedTime > 1)
+            {
+                gettingHit = false;
+                Action = Action;
             }
         }
     }

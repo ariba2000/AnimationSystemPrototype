@@ -1,130 +1,362 @@
 fileFormatVersion: 2
 guid: de755a5ae9c8e8d4bac1c3d40a011746
-timeCreated: 1551380766
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: BountyHunter_
-    100004: BountyHunter_ Head
-    100006: BountyHunter_ L Calf
-    100008: BountyHunter_ L Clavicle
-    100010: BountyHunter_ L Finger0
-    100012: BountyHunter_ L Finger01
-    100014: BountyHunter_ L Finger02
-    100016: BountyHunter_ L Finger1
-    100018: BountyHunter_ L Finger11
-    100020: BountyHunter_ L Finger12
-    100022: BountyHunter_ L Foot
-    100024: BountyHunter_ L Forearm
-    100026: BountyHunter_ L Hand
-    100028: BountyHunter_ L Thigh
-    100030: BountyHunter_ L Toe0
-    100032: BountyHunter_ L Toe01
-    100034: BountyHunter_ L Toe02
-    100036: BountyHunter_ L Toe1
-    100038: BountyHunter_ L Toe11
-    100040: BountyHunter_ L Toe12
-    100042: BountyHunter_ L UpperArm
-    100044: BountyHunter_ Neck
-    100046: BountyHunter_ Pelvis
-    100048: BountyHunter_ Ponytail1
-    100050: BountyHunter_ Ponytail1Nub
-    100052: BountyHunter_ R Calf
-    100054: BountyHunter_ R Clavicle
-    100056: BountyHunter_ R Finger0
-    100058: BountyHunter_ R Finger01
-    100060: BountyHunter_ R Finger02
-    100062: BountyHunter_ R Finger1
-    100064: BountyHunter_ R Finger11
-    100066: BountyHunter_ R Finger12
-    100068: BountyHunter_ R Foot
-    100070: BountyHunter_ R Forearm
-    100072: BountyHunter_ R Hand
-    100074: BountyHunter_ R Thigh
-    100076: BountyHunter_ R Toe0
-    100078: BountyHunter_ R Toe01
-    100080: BountyHunter_ R Toe02
-    100082: BountyHunter_ R Toe1
-    100084: BountyHunter_ R Toe11
-    100086: BountyHunter_ R Toe12
-    100088: BountyHunter_ R UpperArm
-    100090: BountyHunter_ Spine
-    100092: BountyHunter_ Spine1
-    100094: BountyHunter_ Spine2
-    100096: BountyHunter_ WeaponActioon
-    100098: BountyHunter_ WeaponIdle
-    100100: BountyHunter_EyeL
-    100102: BountyHunter_EyelidLeftLower
-    100104: BountyHunter_EyelidLeftUpper
-    100106: BountyHunter_EyelidRightLower
-    100108: BountyHunter_EyelidRightUpper
-    100110: BountyHunter_EyeR
-    100112: root
-    400000: //RootNode
-    400002: BountyHunter_
-    400004: BountyHunter_ Head
-    400006: BountyHunter_ L Calf
-    400008: BountyHunter_ L Clavicle
-    400010: BountyHunter_ L Finger0
-    400012: BountyHunter_ L Finger01
-    400014: BountyHunter_ L Finger02
-    400016: BountyHunter_ L Finger1
-    400018: BountyHunter_ L Finger11
-    400020: BountyHunter_ L Finger12
-    400022: BountyHunter_ L Foot
-    400024: BountyHunter_ L Forearm
-    400026: BountyHunter_ L Hand
-    400028: BountyHunter_ L Thigh
-    400030: BountyHunter_ L Toe0
-    400032: BountyHunter_ L Toe01
-    400034: BountyHunter_ L Toe02
-    400036: BountyHunter_ L Toe1
-    400038: BountyHunter_ L Toe11
-    400040: BountyHunter_ L Toe12
-    400042: BountyHunter_ L UpperArm
-    400044: BountyHunter_ Neck
-    400046: BountyHunter_ Pelvis
-    400048: BountyHunter_ Ponytail1
-    400050: BountyHunter_ Ponytail1Nub
-    400052: BountyHunter_ R Calf
-    400054: BountyHunter_ R Clavicle
-    400056: BountyHunter_ R Finger0
-    400058: BountyHunter_ R Finger01
-    400060: BountyHunter_ R Finger02
-    400062: BountyHunter_ R Finger1
-    400064: BountyHunter_ R Finger11
-    400066: BountyHunter_ R Finger12
-    400068: BountyHunter_ R Foot
-    400070: BountyHunter_ R Forearm
-    400072: BountyHunter_ R Hand
-    400074: BountyHunter_ R Thigh
-    400076: BountyHunter_ R Toe0
-    400078: BountyHunter_ R Toe01
-    400080: BountyHunter_ R Toe02
-    400082: BountyHunter_ R Toe1
-    400084: BountyHunter_ R Toe11
-    400086: BountyHunter_ R Toe12
-    400088: BountyHunter_ R UpperArm
-    400090: BountyHunter_ Spine
-    400092: BountyHunter_ Spine1
-    400094: BountyHunter_ Spine2
-    400096: BountyHunter_ WeaponActioon
-    400098: BountyHunter_ WeaponIdle
-    400100: BountyHunter_EyeL
-    400102: BountyHunter_EyelidLeftLower
-    400104: BountyHunter_EyelidLeftUpper
-    400106: BountyHunter_EyelidRightLower
-    400108: BountyHunter_EyelidRightUpper
-    400110: BountyHunter_EyeR
-    400112: root
-    7400000: 2HitComboArmed
-    9500000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: BountyHunter_
+  - first:
+      1: 100004
+    second: BountyHunter_ Head
+  - first:
+      1: 100006
+    second: BountyHunter_ L Calf
+  - first:
+      1: 100008
+    second: BountyHunter_ L Clavicle
+  - first:
+      1: 100010
+    second: BountyHunter_ L Finger0
+  - first:
+      1: 100012
+    second: BountyHunter_ L Finger01
+  - first:
+      1: 100014
+    second: BountyHunter_ L Finger02
+  - first:
+      1: 100016
+    second: BountyHunter_ L Finger1
+  - first:
+      1: 100018
+    second: BountyHunter_ L Finger11
+  - first:
+      1: 100020
+    second: BountyHunter_ L Finger12
+  - first:
+      1: 100022
+    second: BountyHunter_ L Foot
+  - first:
+      1: 100024
+    second: BountyHunter_ L Forearm
+  - first:
+      1: 100026
+    second: BountyHunter_ L Hand
+  - first:
+      1: 100028
+    second: BountyHunter_ L Thigh
+  - first:
+      1: 100030
+    second: BountyHunter_ L Toe0
+  - first:
+      1: 100032
+    second: BountyHunter_ L Toe01
+  - first:
+      1: 100034
+    second: BountyHunter_ L Toe02
+  - first:
+      1: 100036
+    second: BountyHunter_ L Toe1
+  - first:
+      1: 100038
+    second: BountyHunter_ L Toe11
+  - first:
+      1: 100040
+    second: BountyHunter_ L Toe12
+  - first:
+      1: 100042
+    second: BountyHunter_ L UpperArm
+  - first:
+      1: 100044
+    second: BountyHunter_ Neck
+  - first:
+      1: 100046
+    second: BountyHunter_ Pelvis
+  - first:
+      1: 100048
+    second: BountyHunter_ Ponytail1
+  - first:
+      1: 100050
+    second: BountyHunter_ Ponytail1Nub
+  - first:
+      1: 100052
+    second: BountyHunter_ R Calf
+  - first:
+      1: 100054
+    second: BountyHunter_ R Clavicle
+  - first:
+      1: 100056
+    second: BountyHunter_ R Finger0
+  - first:
+      1: 100058
+    second: BountyHunter_ R Finger01
+  - first:
+      1: 100060
+    second: BountyHunter_ R Finger02
+  - first:
+      1: 100062
+    second: BountyHunter_ R Finger1
+  - first:
+      1: 100064
+    second: BountyHunter_ R Finger11
+  - first:
+      1: 100066
+    second: BountyHunter_ R Finger12
+  - first:
+      1: 100068
+    second: BountyHunter_ R Foot
+  - first:
+      1: 100070
+    second: BountyHunter_ R Forearm
+  - first:
+      1: 100072
+    second: BountyHunter_ R Hand
+  - first:
+      1: 100074
+    second: BountyHunter_ R Thigh
+  - first:
+      1: 100076
+    second: BountyHunter_ R Toe0
+  - first:
+      1: 100078
+    second: BountyHunter_ R Toe01
+  - first:
+      1: 100080
+    second: BountyHunter_ R Toe02
+  - first:
+      1: 100082
+    second: BountyHunter_ R Toe1
+  - first:
+      1: 100084
+    second: BountyHunter_ R Toe11
+  - first:
+      1: 100086
+    second: BountyHunter_ R Toe12
+  - first:
+      1: 100088
+    second: BountyHunter_ R UpperArm
+  - first:
+      1: 100090
+    second: BountyHunter_ Spine
+  - first:
+      1: 100092
+    second: BountyHunter_ Spine1
+  - first:
+      1: 100094
+    second: BountyHunter_ Spine2
+  - first:
+      1: 100096
+    second: BountyHunter_ WeaponActioon
+  - first:
+      1: 100098
+    second: BountyHunter_ WeaponIdle
+  - first:
+      1: 100100
+    second: BountyHunter_EyeL
+  - first:
+      1: 100102
+    second: BountyHunter_EyelidLeftLower
+  - first:
+      1: 100104
+    second: BountyHunter_EyelidLeftUpper
+  - first:
+      1: 100106
+    second: BountyHunter_EyelidRightLower
+  - first:
+      1: 100108
+    second: BountyHunter_EyelidRightUpper
+  - first:
+      1: 100110
+    second: BountyHunter_EyeR
+  - first:
+      1: 100112
+    second: root
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: BountyHunter_
+  - first:
+      4: 400004
+    second: BountyHunter_ Head
+  - first:
+      4: 400006
+    second: BountyHunter_ L Calf
+  - first:
+      4: 400008
+    second: BountyHunter_ L Clavicle
+  - first:
+      4: 400010
+    second: BountyHunter_ L Finger0
+  - first:
+      4: 400012
+    second: BountyHunter_ L Finger01
+  - first:
+      4: 400014
+    second: BountyHunter_ L Finger02
+  - first:
+      4: 400016
+    second: BountyHunter_ L Finger1
+  - first:
+      4: 400018
+    second: BountyHunter_ L Finger11
+  - first:
+      4: 400020
+    second: BountyHunter_ L Finger12
+  - first:
+      4: 400022
+    second: BountyHunter_ L Foot
+  - first:
+      4: 400024
+    second: BountyHunter_ L Forearm
+  - first:
+      4: 400026
+    second: BountyHunter_ L Hand
+  - first:
+      4: 400028
+    second: BountyHunter_ L Thigh
+  - first:
+      4: 400030
+    second: BountyHunter_ L Toe0
+  - first:
+      4: 400032
+    second: BountyHunter_ L Toe01
+  - first:
+      4: 400034
+    second: BountyHunter_ L Toe02
+  - first:
+      4: 400036
+    second: BountyHunter_ L Toe1
+  - first:
+      4: 400038
+    second: BountyHunter_ L Toe11
+  - first:
+      4: 400040
+    second: BountyHunter_ L Toe12
+  - first:
+      4: 400042
+    second: BountyHunter_ L UpperArm
+  - first:
+      4: 400044
+    second: BountyHunter_ Neck
+  - first:
+      4: 400046
+    second: BountyHunter_ Pelvis
+  - first:
+      4: 400048
+    second: BountyHunter_ Ponytail1
+  - first:
+      4: 400050
+    second: BountyHunter_ Ponytail1Nub
+  - first:
+      4: 400052
+    second: BountyHunter_ R Calf
+  - first:
+      4: 400054
+    second: BountyHunter_ R Clavicle
+  - first:
+      4: 400056
+    second: BountyHunter_ R Finger0
+  - first:
+      4: 400058
+    second: BountyHunter_ R Finger01
+  - first:
+      4: 400060
+    second: BountyHunter_ R Finger02
+  - first:
+      4: 400062
+    second: BountyHunter_ R Finger1
+  - first:
+      4: 400064
+    second: BountyHunter_ R Finger11
+  - first:
+      4: 400066
+    second: BountyHunter_ R Finger12
+  - first:
+      4: 400068
+    second: BountyHunter_ R Foot
+  - first:
+      4: 400070
+    second: BountyHunter_ R Forearm
+  - first:
+      4: 400072
+    second: BountyHunter_ R Hand
+  - first:
+      4: 400074
+    second: BountyHunter_ R Thigh
+  - first:
+      4: 400076
+    second: BountyHunter_ R Toe0
+  - first:
+      4: 400078
+    second: BountyHunter_ R Toe01
+  - first:
+      4: 400080
+    second: BountyHunter_ R Toe02
+  - first:
+      4: 400082
+    second: BountyHunter_ R Toe1
+  - first:
+      4: 400084
+    second: BountyHunter_ R Toe11
+  - first:
+      4: 400086
+    second: BountyHunter_ R Toe12
+  - first:
+      4: 400088
+    second: BountyHunter_ R UpperArm
+  - first:
+      4: 400090
+    second: BountyHunter_ Spine
+  - first:
+      4: 400092
+    second: BountyHunter_ Spine1
+  - first:
+      4: 400094
+    second: BountyHunter_ Spine2
+  - first:
+      4: 400096
+    second: BountyHunter_ WeaponActioon
+  - first:
+      4: 400098
+    second: BountyHunter_ WeaponIdle
+  - first:
+      4: 400100
+    second: BountyHunter_EyeL
+  - first:
+      4: 400102
+    second: BountyHunter_EyelidLeftLower
+  - first:
+      4: 400104
+    second: BountyHunter_EyelidLeftUpper
+  - first:
+      4: 400106
+    second: BountyHunter_EyelidRightLower
+  - first:
+      4: 400108
+    second: BountyHunter_EyelidRightUpper
+  - first:
+      4: 400110
+    second: BountyHunter_EyeR
+  - first:
+      4: 400112
+    second: root
+  - first:
+      74: 7400000
+    second: 2HitComboArmed
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -137,16 +369,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: 2HitComboArmed
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -261,12 +497,13 @@ ModelImporter:
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ L Clavicle/BountyHunter_ L UpperArm/BountyHunter_
-          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger0/BountyHunter_ L Finger01
+          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger0/BountyHunter_ L
+          Finger01
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ L Clavicle/BountyHunter_ L UpperArm/BountyHunter_
-          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger0/BountyHunter_ L Finger01/BountyHunter_
-          L Finger02
+          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger0/BountyHunter_ L
+          Finger01/BountyHunter_ L Finger02
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ L Clavicle/BountyHunter_ L UpperArm/BountyHunter_
@@ -274,12 +511,13 @@ ModelImporter:
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ L Clavicle/BountyHunter_ L UpperArm/BountyHunter_
-          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger1/BountyHunter_ L Finger11
+          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger1/BountyHunter_ L
+          Finger11
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ L Clavicle/BountyHunter_ L UpperArm/BountyHunter_
-          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger1/BountyHunter_ L Finger11/BountyHunter_
-          L Finger12
+          L Forearm/BountyHunter_ L Hand/BountyHunter_ L Finger1/BountyHunter_ L
+          Finger11/BountyHunter_ L Finger12
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ Neck
@@ -333,12 +571,13 @@ ModelImporter:
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
-          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger0/BountyHunter_ R Finger01
+          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger0/BountyHunter_ R
+          Finger01
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
-          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger0/BountyHunter_ R Finger01/BountyHunter_
-          R Finger02
+          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger0/BountyHunter_ R
+          Finger01/BountyHunter_ R Finger02
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
@@ -346,12 +585,13 @@ ModelImporter:
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
-          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger1/BountyHunter_ R Finger11
+          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger1/BountyHunter_ R
+          Finger11
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
-          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger1/BountyHunter_ R Finger11/BountyHunter_
-          R Finger12
+          R Forearm/BountyHunter_ R Hand/BountyHunter_ R Finger1/BountyHunter_ R
+          Finger11/BountyHunter_ R Finger12
         weight: 1
       - path: root/BountyHunter_/BountyHunter_ Pelvis/BountyHunter_ Spine/BountyHunter_
           Spine1/BountyHunter_ Spine2/BountyHunter_ R Clavicle/BountyHunter_ R UpperArm/BountyHunter_
@@ -369,26 +609,45 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -398,15 +657,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: root
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f6f7ba96ae98ffb4f8beb50fa104651b,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f6f7ba96ae98ffb4f8beb50fa104651b, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
