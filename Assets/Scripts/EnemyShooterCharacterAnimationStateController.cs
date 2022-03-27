@@ -39,10 +39,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
                         animator.CrossFadeInFixedTime("Base Layer.Aiming", 0.25f);
                         break;
                     case ActionList.Walk:
-                        animator.CrossFadeInFixedTime("Base Layer.WalkAiming", 0.25f);
+                        animator.CrossFadeInFixedTime("Base Layer.WalkAiming Blend Tree", 0.25f);
                         break;
                     case ActionList.Run:
-                        animator.CrossFadeInFixedTime("Base Layer.RunAiming", 0.25f);
+                        animator.CrossFadeInFixedTime("Base Layer.RunAiming Blend Tree", 0.25f);
                         break;
                     case ActionList.Shoot:
                         animator.CrossFadeInFixedTime("Base Layer.Shoot", 0.25f);
@@ -83,7 +83,8 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         }
     }
 
-    bool isAiming;
+    bool isAiming = false;
+    bool isShooting = false;
     bool gettingHit;
 
     void Start()
@@ -144,6 +145,10 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         //Aiming
         if (Input.GetKeyDown(KeyCode.A) && Action != ActionList.Crouch && Action != ActionList.Shoot)
         {
+            animator.SetFloat("XAxis", 0f);
+            animator.SetFloat("YAxis", 1f);
+
+            isShooting = !isShooting;
             isAiming = !isAiming;
             Action = Action;
         }
@@ -166,14 +171,16 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         //Shoot
         if (Input.GetKeyDown(KeyCode.S) && isAiming)
         {
-            if (Action == ActionList.Shoot)
-            {
-                Action = ActionList.Idle;
-            }
-            else
-            {
-                Action = ActionList.Shoot;
-            }
+            isShooting = !isShooting;
+
+            //if (Action == ActionList.Shoot)
+            //{
+            //    Action = ActionList.Idle;
+            //}
+            //else
+            //{
+            //    Action = ActionList.Shoot;
+            //}
         }
 
 
@@ -234,10 +241,22 @@ public class EnemyShooterCharacterAnimationStateController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit) && !isShooting)
         {
             transform.LookAt(hit.point);
         }
+
+        Vector3 direction = (hit.point - transform.position);
+        float radAngle = Vector3.Angle(transform.forward, direction) * Mathf.Deg2Rad;
+
+        if (Vector3.Cross(transform.forward, direction).y < 0)
+        {
+            radAngle = -radAngle;
+        }
+
+        Debug.Log("Y: " + Mathf.Cos(radAngle) + " X: " + Mathf.Sin(radAngle));
+        animator.SetFloat("XAxis", Mathf.Sin(radAngle));
+        animator.SetFloat("YAxis", Mathf.Cos(radAngle));
 
         return hit.point;
     }
