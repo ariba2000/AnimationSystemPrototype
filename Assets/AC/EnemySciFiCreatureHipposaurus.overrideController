@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnemySciFiCreatureHipposaurus
+  m_Controller: {fileID: 9100000, guid: 52d1bbf16448cd746ba43a98e7a6f29b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4c6a1eac67a31124996677383c631c76, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4947e4746b23bdb498f55dea067fe439, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 99376eac810a36e4abb51f11a72014a1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b26c53236aebea044a091e4342648de2, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 79e7419edaa220f428611e04f244e45e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5cdb574ed2071ac4185a0ae4ad6724b3, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 459bdd36bad63244fbb6ddc4762f6cdb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5aa80d8ee4907de40a51b37faeaad0e2, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 888fcee0c976b2640843c18157d7e1ce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e34cfbaab3259d7438ba14efa9619681, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 3be0cc11626897f45b629f713eee9340, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b83bee0533112f643ae55741e39db7c4, type: 3}
